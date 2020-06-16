@@ -1,2 +1,10 @@
 theme: minima
-title: This is the new title
+title: This is the title
+description: This is the description
+author:
+  name: Stephanie J. Spielman, PhD
+twitter_username: @stephspiel
+github_username: @sjspielman
+
+
+
