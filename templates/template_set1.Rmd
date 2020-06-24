@@ -28,7 +28,7 @@ library(learnr)
 Please name these questions `calc_qX` where X is the number (1, 2, 3, ...).
 
 1. What is 5 times 6?
-  + Hint: Use the asterisk `*` to multiply numbers
+  + **Hint:** Use the asterisk `*` to multiply numbers
   + Solution: 5*6
 
 ```{r calc_q1, exercise=TRUE}
@@ -39,21 +39,20 @@ Please name these questions `calc_qX` where X is the number (1, 2, 3, ...).
 ```
   
 <div id="calc_q1-hint">
-**Hint:**  Use the asterisk `*` to multiply numbers
+****Hint:****  Use the asterisk `*` to multiply numbers
 </div>
 
 
-
 2. What is 600 divided by 2.53?
-  + Hint: Use the forward slash `/` to divide numbers
+  + **Hint:** Use the forward slash `/` to divide numbers
   + Solution: 600/2.53
 
 3. What is 138 squared?
-  + Hint: Use the carot symbol `^` *or* two asterisks (`**`) to raise numbers to an exponent.
+  + **Hint:** Use the carot symbol `^` *or* two asterisks (`**`) to raise numbers to an exponent.
   + Solution: 138**2 or 138^2  (cinclude write both of these, on two lines of code., second one should have a comment after it like `## equally valid approach`)
 
 4. What is the square root of 14?
-  + Hint: Square roots are like raising to the power of 0.5
+  + **Hint:** Square roots are like raising to the power of 0.5
   + Solution: 14^0.5
 
 
@@ -62,38 +61,38 @@ Please name these questions `calc_qX` where X is the number (1, 2, 3, ...).
 Please name these questions `logical_qX` where X is the number (1, 2, 3, ...).
 
 1. Use a *logical operator* to ask if 56 is greater than 7.
-  + Hint: Logical operators include: `>`, `<`, `>=`, `<=`, `==`
+  + **Hint:** Logical operators include: `>`, `<`, `>=`, `<=`, `==`
   + Solution: 56 > 7
   
 
 2. Use a *logical operator* to ask if 110 is equal to 12.
-  + Hint: When comparing *equality* of numbers, you MUST use two equals!! `==`
+  + **Hint:** When comparing *equality* of numbers, you MUST use two equals!! `==`
   + Solution: 110 == 12
   
 3. Use a *logical operator* to ask if 32 is less than or equal to 88.
-  + Hint: `<` is less than, but `<=` is less than *or equal to*`
+  + **Hint:** `<` is less than, but `<=` is less than *or equal to*`
   + Solution: 32 <= 88
 
 4. Use a *logical operator* to ask if 100 is equal to -10 squared.
-  + Hint: Don't forget to use parentheses!!
+  + **Hint:** Don't forget to use parentheses!!
   + Solution: 100 == (-10)^2
 
 5. Use a *logical operator* to ask if 100 is *not equal* to -55. 
-  + Hint: Check if values are *not equal* with the logical operator `!=`. Generally speaking, exclamation marks negate logical statements.
+  + **Hint:** Check if values are *not equal* with the logical operator `!=`. Generally speaking, exclamation marks negate logical statements.
   + Solution 100 != -55
 
 6. Use a *logical operator* to ask if 100 is *not less than* 88. 
- + Hint: *Negate* any other logical operator (besides `==`, which becomes `!=`), by *enclosing the statement inside parentheses prefixed by an exclamation mark, e.g. `!(...statement...)`
+ + **Hint:** *Negate* any other logical operator (besides `==`, which becomes `!=`), by *enclosing the statement inside parentheses prefixed by an exclamation mark, e.g. `!(...statement...)`
  + Solution: !(100 < 88)
 
 7. In all questions above, you wrote *single logical statements* - you used a logical operator to evaluate if a single thing was TRUE or FALSE. This time, write a *compound logical statement* to ask if: 100 is equal to 100 *and* 66 is equal to 66.
 <!-- Shemaiah - make 2 hint chunks for this one. See the tutorial linked at the top!! -->
-  + Hint: Combine statements with *and* using the ampersand `&`
+  + **Hint:** Combine statements with *and* using the ampersand `&`
   + Hint 2: Statements with "and" will only evaluate as TRUE if *both* conditions are TRUE. 
   + Solution: 100 == 100 & 66 == 66
 
 8. Write a *compound logical statement* to ask if 100 is greater than to 87 *and* 66 is less than 12.
-  + Hint: Combine statements with *and* using the apersand `&`
+  + **Hint:** Combine statements with *and* using the apersand `&`
   + Solution: 100 > 87  & 66 < 12
 
 9. Similar to the previous question, write a *compound logical statement* to ask if 100 is greater than to 87 *OR* 66 is less than 12.
@@ -134,11 +133,11 @@ d) We can't tell.
 <!-- Shemaiah: for these questions, include the option:   exercise.lines=8     -->
 
 2. Using the code presented in question 1 to help guide you, define a variable named `banana_price` whose value is 0.55 (aka 55 cents). 
-  + Hint: Use the assignment operator `<-` to assign the value 0.55 to the variable name `banana_price`
+  + **Hint:** Use the assignment operator `<-` to assign the value 0.55 to the variable name `banana_price`
   + Solution: banana_price <- 0.55
 
 3. Again, define the `banana_price` variable (since these questions don't communicate with each other!!). Use R as a calculator to determine the cost of 17 bananas.
-  + Hint: Perform this operation using the `banana_price` variable itself.
+  + **Hint:** Perform this operation using the `banana_price` variable itself.
   + Solution: 
   ```
   banana_price <- 0.55
@@ -146,7 +145,7 @@ d) We can't tell.
   ```
   
 4. Again, define the `banana_price` variable. Define a second variable called `num_bananas` with the value for how many bananas you're buying. Using both your variables, use R as a calculator to calculate the total cost.
-  + Hint: We are learning to use variables whenever possible instead of the direct numbers. Using values in calculations rather than variables representing those values is called **hard-coding** and can lead to bugs!
+  + **Hint:** We are learning to use variables whenever possible instead of the direct numbers. Using values in calculations rather than variables representing those values is called **hard-coding** and can lead to bugs!
   + Solution: 
   ```
   banana_price <- 0.55
@@ -165,7 +164,7 @@ d) We can't tell.
 
 <!-- Shemaiah: make sure to KEEP THE \ in front of $. -->
 6. Let's work with *logical operations* and variables. Imagine you have \$5 to spend at the grocery store. Can you afford to buy 30 bananas (you are apparently making *a lot* of quarantine banana bread)? To answer this question, first *define* four variables (`banana_price`, `num_bananas`[ but what's the value this time?!], `total_cost`, and `total_money` which represents your budget). Then, use logical operations to compare `total_cost` and `total_money`. You should arrive at an answer of TRUE *if it is affordable*, and FALSE if you can't buy this many bananas.
-  + Hint: A TRUE solution is one where `total_money` is *greater than or equal to* the `total_cost`. Or, where `total_cost` is *less than or equal to* `total_money`.
+  + **Hint:** A TRUE solution is one where `total_money` is *greater than or equal to* the `total_cost`. Or, where `total_cost` is *less than or equal to* `total_money`.
    + Solution: 
   ```
   banana_price <- 0.55
