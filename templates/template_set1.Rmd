@@ -1,0 +1,193 @@
+---
+title: "Question Template Set 1"
+author: "Stephanie J. Spielman"
+date: "6/24/2020"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(learnr)
+```
+
+# Resources for Shemaiah:
+
++ **Before you start**, go through this tutorial carefully: [learnr exercises](https://rstudio.github.io/learnr/exercises.html). 
+
++ For these questions, you do not need a setup chunk (but we will once we start using packages!)
++ Each question should have a corresponding `solution` chunk. IN that chunk, do not just type the answer - write out the code to get the answer (e.g. for q1 don't put `30`, put `5*6`)
++ Each question should have a corresponding hint. In this case, all hints are not actually code, but markdown text!! Therefore, you actually need to use HTML to write the hints instead of writing code chunks for hints (described in link above). 
+  + If a hint is ever code, use a chunk instead.
++ I've done set 1 question 1 below to show you exactly what I'm looking for.
+
+
+### Set 1: Using R as a calculator
+
+Please name these questions `calc_qX` where X is the number (1, 2, 3, ...).
+
+1. What is 5 times 6?
+  + Hint: Use the asterisk `*` to multiply numbers
+  + Solution: 5*6
+
+```{r calc_q1, exercise=TRUE}
+```
+  
+```{r calc_q1-solution}
+5*6
+```
+  
+<div id="calc_q1-hint">
+**Hint:**  Use the asterisk `*` to multiply numbers
+</div>
+
+
+
+2. What is 600 divided by 2.53?
+  + Hint: Use the forward slash `/` to divide numbers
+  + Solution: 600/2.53
+
+3. What is 138 squared?
+  + Hint: Use the carot symbol `^` *or* two asterisks (`**`) to raise numbers to an exponent.
+  + Solution: 138**2 or 138^2  (cinclude write both of these, on two lines of code., second one should have a comment after it like `## equally valid approach`)
+
+4. What is the square root of 14?
+  + Hint: Square roots are like raising to the power of 0.5
+  + Solution: 14^0.5
+
+
+### Set 2: Working with logic: TRUE and FALSE
+
+Please name these questions `logical_qX` where X is the number (1, 2, 3, ...).
+
+1. Use a *logical operator* to ask if 56 is greater than 7.
+  + Hint: Logical operators include: `>`, `<`, `>=`, `<=`, `==`
+  + Solution: 56 > 7
+  
+
+2. Use a *logical operator* to ask if 110 is equal to 12.
+  + Hint: When comparing *equality* of numbers, you MUST use two equals!! `==`
+  + Solution: 110 == 12
+  
+3. Use a *logical operator* to ask if 32 is less than or equal to 88.
+  + Hint: `<` is less than, but `<=` is less than *or equal to*`
+  + Solution: 32 <= 88
+
+4. Use a *logical operator* to ask if 100 is equal to -10 squared.
+  + Hint: Don't forget to use parentheses!!
+  + Solution: 100 == (-10)^2
+
+5. Use a *logical operator* to ask if 100 is *not equal* to -55. 
+  + Hint: Check if values are *not equal* with the logical operator `!=`. Generally speaking, exclamation marks negate logical statements.
+  + Solution 100 != -55
+
+6. Use a *logical operator* to ask if 100 is *not less than* 88. 
+ + Hint: *Negate* any other logical operator (besides `==`, which becomes `!=`), by *enclosing the statement inside parentheses prefixed by an exclamation mark, e.g. `!(...statement...)`
+ + Solution: !(100 < 88)
+
+7. In all questions above, you wrote *single logical statements* - you used a logical operator to evaluate if a single thing was TRUE or FALSE. This time, write a *compound logical statement* to ask if: 100 is equal to 100 *and* 66 is equal to 66.
+<!-- Shemaiah - make 2 hint chunks for this one. See the tutorial linked at the top!! -->
+  + Hint: Combine statements with *and* using the ampersand `&`
+  + Hint 2: Statements with "and" will only evaluate as TRUE if *both* conditions are TRUE. 
+  + Solution: 100 == 100 & 66 == 66
+
+8. Write a *compound logical statement* to ask if 100 is greater than to 87 *and* 66 is less than 12.
+  + Hint: Combine statements with *and* using the apersand `&`
+  + Solution: 100 > 87  & 66 < 12
+
+9. Similar to the previous question, write a *compound logical statement* to ask if 100 is greater than to 87 *OR* 66 is less than 12.
+<!-- Shemaiah - make 2 hint chunks for this one.  -->
+  + Hint 1: Combine statements with *or* using the "pipe operator" `|`. This is not the letter L or I - this symbol is located on the backslash `\` key. Press Shift + `\` to get it.
+  + Hint 2: Statements with "or" will evaluate as TRUE if *at least one* condition is TRUE. 
+  + Solution: 100 > 87 | 66 < 12
+
+
+### Set 3: Defining and understanding variables in R
+
+Please name these questions `variables_qX` where X is the number (1, 2, 3, ...). Note: for question 1 here, actually write a regular code chunk (just keep it as is!), and then only write the multiple choice. These should not be within in a `quiz()` - make an indiviual code chunk for each question (see the top example under "Questions" [here](https://blog.rstudio.com/2017/07/11/introducing-learnr/)).
+
+1. The code example below defines a variable. Answer the multiple choice questions about this code:
+```{r}
+y <- 8.5
+```
+
+MC1: What is the *name* of this variable?
+a) `<-`
+b) y [CORRECT]
+c) 8.5
+d) We can't tell.
+
+MC2: What is the *value* of this variable?
+a) `<-`
+b) y
+c) 8.5 [CORRECT]
+d) We can't tell.
+
+MC3: What is the *type* of this variable?
+a) Character
+b) Numeric [CORRECT]
+c) Logical
+d) We can't tell.
+
+
+<!-- Shemaiah: for these questions, include the option:   exercise.lines=8     -->
+
+2. Using the code presented in question 1 to help guide you, define a variable named `banana_price` whose value is 0.55 (aka 55 cents). 
+  + Hint: Use the assignment operator `<-` to assign the value 0.55 to the variable name `banana_price`
+  + Solution: banana_price <- 0.55
+
+3. Again, define the `banana_price` variable (since these questions don't communicate with each other!!). Use R as a calculator to determine the cost of 17 bananas.
+  + Hint: Perform this operation using the `banana_price` variable itself.
+  + Solution: 
+  ```
+  banana_price <- 0.55
+  banana_price * 17
+  ```
+  
+4. Again, define the `banana_price` variable. Define a second variable called `num_bananas` with the value for how many bananas you're buying. Using both your variables, use R as a calculator to calculate the total cost.
+  + Hint: We are learning to use variables whenever possible instead of the direct numbers. Using values in calculations rather than variables representing those values is called **hard-coding** and can lead to bugs!
+  + Solution: 
+  ```
+  banana_price <- 0.55
+  num_bananas <- 17
+  banana_price * num_bananas
+  ```
+  
+5. Again, define your two variables, `banana_price` and `num_bananas`. Again calculate the total cost using these variables, *but this time*, save the output to a new variable called `total_cost`. Output the final value of `total_cost` by simply typing the variable name on its own line.
+  + Solution: 
+  ```
+  banana_price <- 0.55
+  num_bananas <- 17
+  total_cost <- banana_price * num_bananas
+  total_cost
+  ```
+
+<!-- Shemaiah: make sure to KEEP THE \ in front of $. -->
+6. Let's work with *logical operations* and variables. Imagine you have \$5 to spend at the grocery store. Can you afford to buy 30 bananas (you are apparently making *a lot* of quarantine banana bread)? To answer this question, first *define* four variables (`banana_price`, `num_bananas`[ but what's the value this time?!], `total_cost`, and `total_money` which represents your budget). Then, use logical operations to compare `total_cost` and `total_money`. You should arrive at an answer of TRUE *if it is affordable*, and FALSE if you can't buy this many bananas.
+  + Hint: A TRUE solution is one where `total_money` is *greater than or equal to* the `total_cost`. Or, where `total_cost` is *less than or equal to* `total_money`.
+   + Solution: 
+  ```
+  banana_price <- 0.55
+  num_bananas <- 30
+  total_money <- 5
+  total_cost <- banana_price * num_bananas
+  total_cost <= total_money
+  ``` 
+
+7. The grocery store visit is getting more interesting. Sure, banana bread is all well and good, but it's certainly not as good as chocolate-chip banana bread. You've recently come into some money, so you now have \$20 to spend!! You want to buy 4 bags of chocolate chips that cost \$1.50 each as well as 16 bananas which, due to some evil price-gouging, now cost 60 cents (\$0.60) each. Can you afford this purchase? 
+  + Hint-1: Make sure to define all variables with *meaningful variable names* first, *then* perform calculations to determine the `total_cost`, and then compare `total_cost` to `total_money`. In the end, you will have created six variables.
+  + Hint-2: Don't put spaces into your variable names *ever*. Instead, use underscores to represent spaces.
+   + Solution: 
+  ```
+  banana_price <- 0.6
+  num_bananas <- 16
+  choc_price <- 1.5
+  num_choc  <- 4
+  total_money <- 20
+  total_cost <- (banana_price * num_bananas) + (choc_price * num_choc)
+  total_cost <= total_money
+  ``` 
+
+
+
