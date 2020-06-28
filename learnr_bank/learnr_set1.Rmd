@@ -26,30 +26,19 @@ library(learnr)
 ### Set 1: Using R as a calculator
 
 1. What is 5 times 6?
-  + **Hint:**  Use the asterisk `*` to multiply numbers
-  + Solution: 5*6
-  
-```{r calc_q1, exercise=TRUE}
-```
-  
-```{r calc_q1-solution}
-5*6
+
+```{r calc_q1, exercise =TRUE}
+
 ```
   
 <div id="calc_q1-hint">
 **Hint:**  Use the asterisk `*` to multiply numbers
 </div>
 
-
 2. What is 600 divided by 2.53?
-  + **Hint:** Use the forward slash `/` to divide numbers
-  + Solution: 600/2.53
-  
-``` {r calc_q2, exercise = T}
-```
+ 
+``` {r calc_q2, exercise = TRUE}
 
-``` {r calc_q2-solution}
-600/2.53
 ```
 
 <div id="calc_q2-hint">
@@ -57,12 +46,47 @@ library(learnr)
 </div>
 
 3. What is 138 squared?
-  + **Hint:** Use the carot symbol `^` *or* two asterisks (`**`) to raise numbers to an exponent.
-  + Solution: 138**2 or 138^2  (cinclude write both of these, on two lines of code., second one should have a comment after it like `## equally valid approach`)
+  
+``` {r calc_q3, exercise = TRUE}
+
+```
+
+<div id="calc_q3-hint">
+**Hint:**  Use the carot symbol `^` *or* two asterisks (`**`) to raise numbers to an exponent.
+</div>
 
 4. What is the square root of 14?
-  + **Hint:** Square roots are like raising to the power of 0.5
-  + Solution: 14^0.5
+  
+``` {r calc_q4, exercise = TRUE}
+
+```  
+
+<div id="calc_q4-hint">
+**Hint:**   Square roots are like raising to the power of 0.5
+</div>
+
+### Answer Key for Set 1
+``` {r, calc-q1-answer}
+#Solution to Question 1
+5*6
+```
+
+``` {r, calc-q2-answer}
+#Solution to Question 2
+600/2.53
+```
+
+``` {r, calc-q3-answer}
+#Solution to Question 3
+138**2 
+138^2 #equally valid approach
+```
+
+``` {r, calc-q4-answer}
+#Solution to Question 4
+138**2 
+138^2 #equally valid approach to Question 4
+```
 
 
 ### Set 2: Working with logic: TRUE and FALSE
