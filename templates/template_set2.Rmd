@@ -1,0 +1,188 @@
+---
+title: "Question Template Set 2"
+author: "Stephanie J. Spielman"
+date: "6/24/2020"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(learnr)
+```
+
+
+### Set 1: Working with functions in R
+
+Please name these questions `func_qX` where X is the number (1, 2, 3, ...).
+
+1. Use the function `sqrt()` to calculate the square root of 206.
+  + **Hint:** Provide 206 as an *argument* to the function `sqrt()`
+  + Solution: sqrt(206)
+  
+2. Use the function `log()` to calculate the *natural log* (this is actually the default behavior of this function) of 206.
+  + (no hint)
+  + Solution: log(206)
+  
+<!-- This question's chunk should have the ?log in it --> 
+3. Looking up documentation for how to use functions in R (and other languages!) is *very important* - don't try to be a psychic!! To see the documentation for a function, type `?nameoffunction`. To see this in action, run the code below. Have a particular look at the sections "Usage" and "Arguments." Then, use the function `log()` to calculate the log in base 10 of 206.
+  + **Hint**: The function `log()` can optionally take a *second* argument specifying the base. For example, `log(500, 6)` takes the log of 500 in base 6. Make sure you see where this ifnormation is described in the `?log` output!
+  + Solution: log(206, 10)
+
+4. The function `class()` will tell you what *type* of data a given variable or value is. Use this function to determine the *type* of value 7.
+  + **Hint**:  Provide 7 as the argument to `class()`
+  + Solution: class(7)
+
+5. Now, use `class()` to determine the *type* of value "7".
+  + **Hint**:  Don't forget the quotes! What did you learn from the last two questions about how quotes work?
+  + Solution: class("7")
+  
+6. Let's combine our skills! Define a variable called `x` whose value is 7 (no quotes!). Then, determine its type with `class()`, but **save this output** to a new variable called `type_x`. Finally, use logical operators with this variable to ask: Is the type of the variable equal to (hint!) numeric?
+  + **Hint 1**: Don't forget to use `==` when comparing equality of values. 
+  + **Hint 2**: If you receive an error, it may be because you forgot to put quotes around *"numeric"*. If you don't use quotes, R thinks you're referring to a variable called `numeric`, but no such variable exists! R doesn't want to use variables that don't exist, because....they don't exist. 
+  + Solution: x <- 7
+              type_x <- class(x)
+              type_x == "numeric"
+
+
+### Set 2: Working with arrays in R
+
+Please name these questions `array_qX` where X is the number (1, 2, 3, ...).
+
+> Note: The terms "array" and "vector" both refer to the same thing and are used interchangeably, but a "list" is something else entirely! These exercises don't consider lists at all.
+
+
+1. Define an array variable called `array_numbers` that contains the values 1, 2, 3, 4, and 5. Then, type the variable name itself to make sure its contents look right.
+  + **Hint:** Use the function `c()` ("combine") to define your array
+  + Solution: array_numbers <- c(1,2,3,4,5)
+              array_numbers
+              
+2. Define an array variable called `array_numbers2` that again contains the values 1, 2, 3, 4, and 5, **but!** this time use a colon `:` instead of `c()`. Again, type the variable name itself to make sure its contents look right.
+  + **Hint:** `5:7` defines an array with values 5, 6, 7. Can you adapt this approach to the given question
+  + Solution: array_numbers2 <- 1:5
+              array_numbers2
+
+3. Define an array variable called `even_numbers` that contains the values 2, 4, 6, 8, and 10 using the `c()` function.
+  + (no hint)
+  + Solution: even_numbers <- c(2,4,6,8,10)
+              even_numbers
+
+4. Define an array variable called `even_numbers` that contains the values 2, 4, 6, 8, and 10 using a new function (!) `seq()`. The chunk below shows an example of using `seq()`. Run this code to see the function in action, and then *adapt* the code to make the `even_numbers` array.
+  + **Hint 1**: You may want to run `?seq` to see more about how the function works!
+  + **Hint 2**: Always print out your output to be sure the variable you've created is correct. Keep trying until you get there - coding is all about trial and error! 
+  + Solution: even_numbers <- seq(2, 10, 2)
+              even_numbers
+              
+5. The function `length()` tells you how many items are in a given array. Define an array using `seq()` as the multiples of 3 from 0-999 (i.e. 0, 3, 6, 9, ..., 993, 996, 999) and then use `length` to determine how many numbers it contains.
+  + **Hint**: First make sure (print print print!) that you are defining this array correctly. *Only once* you can see that the array is correct should you calculate its length.
+  + Solution: mul3 <- seq(0, 999, 3)
+              length(mul3)
+              
+<!-- a lot of questions coming up should be pre-populated with baseline chunk code--> 
+6. One place where R really shines is *vectorization* - it can perform an operation on *all items in a vector* at the same time! The code below multiplies every value in the array `example_array` by 5. Run this code and examine its output to be sure you understand it. Then, modify the code to instead divide every item in the array by 10.
+  + Baseline chunk code: 
+        example_array <- c(5, 78, -3, 11, 6, 0)
+        example_array * 5
+  + **Hint:** When modifying the code be careful not to delete the definition of `example_array`.
+  + Solution:   example_array / 10
+
+7. We can also perform logical operations in a vectorized context. The code below asks if all values in `example_array` are greater than 0. Run this code and examine its output to be sure you understand it. Then, modify the code to instead ask if every item is *less than or equal to 0**.
+  + Baseline chunk code: 
+        example_array <- c(5, 78, -3, 1, 6, 0)
+        example_array > 0
+  + **Hint 1:** When modifying the code be careful not to delete the definition of `example_array`.
+  + **Hint 2:** This type of output would be referred to as a *logical array*.
+  + Solution:   example_array <= 0
+
+8. In fact, logical values TRUE and FALSE evaluate to numbers 1 and 0, respectively. Use the function `sum()` (adds up values in an array) to calculate the sum of the output from `example_array > 0`. 
+  + **Hint 1:** Don't forget to define `example_array` again here.
+  + **Hint 2:** You can provide the full expression `example_array > 0` to the function `sum()`, or save that logical expression's output to a variable, and use the variable as the argument to `sum()`.
+  + Solution:  example_array <- c(5, 78, -3, 1, 6, 0)
+               sum(example_array > 0)
+
+### Set 3: Working with data frames
+
+This set of exercises will use a data frame (aka "tibble" - we will learn the distinction between these terms!) called `msleep`, which is built-in to R. This dataset contains information about some species of mammals as follows:
+
++ `name`: The common name
++ `genus`: The taxonomic genus
++ `vore`: Dietary strategy (carnivore, omnivore or herbivore)
++ `order`: The taxonomic order
++ `conservation`: The species' conservation status
++ `sleep_total`: Total amount of sleep, in hours, the species tends to experience
++ `sleep_rem`: Total amount of REM sleep, in hours, the species tends to experience
++ `sleep_cycle`: Length of sleep cycle, in hours, the species tends to experience
++ `awake`: Amount of time spent awake, in hours, the species tends to experience
++ `brainwt`: Average brain weight, in kilograms, for this species
++ `bodywt`: Average body weight, in kilograms, for this species
+
+
+First, in the code chunk below, examine the data frame using functions we have seen `head()`, `nrow()`, and `ncol()` to get an overall sense of the data frame itself. Then,  answer the following multiple choice questions about this data frame.
+```{r examine-msleep, exercise=T, exercise.lines = 5}
+
+
+
+```
+<!-- the above has no solution - just a chunk for them to practice and answer subsequent multiple choice -->
+
+MC1: How many rows are in this data frame?
+a) 6
+b) 83 [correct]
+c) 11
+d) We can't tell.
+
+MC2: How many columns are in this data frame?
+a) 6
+b) 83 
+c) 11 [correct]
+d) We can't tell.
+
+MC3: How many columns in the data frame contain *numeric* values?
+a) 6 [correct]
+b) 5
+c) All columns are numeric
+d) No columns are numeric
+
+MC4: How many columns in the data frame contain *character* (string) values?
+a) 6 
+b) 5 [correct]
+c) All columns are character
+d) No columns are character
+
+MC5: How many columns in the data frame contain *logical* (TRUE or FALSE) values?
+a) 6 
+b) 5 
+c) All columns are logical
+d) No columns are logical [correct]
+
+
+<!-- Now back to code questions -->
+
+6. Technically, columns in data frames are actually *named arrays*. We can access them to work with directly using a dollar sign `$`. The code below extracts the `name` variable from the data frame. Run and understand this code, and then modify it to extract the `awake` column.
+
++ Baseline code: `msleep$name`
++ **Hint**: Make sure to *not* use any quotes.
++ Solution: msleep$awake
+
+7. Finally, let's get to everyone's favorite part - statistics! Below shows you how to calculate the *average* (mean!) hours that these mammals are awake for. Try out these other functions to calculate other summary statistics: `median()`, `range()`, `min()`, `max()`, `sd()` (standard deviation), and `summary()` (outputs a lot of stats all at once!).
+
++ Baseline code: `mean(msleep$awake)`
++ no hint
++ solution: just run those functions, spielman is lazy ;)
+
+8. Using your new skills, calculate the _median_ hours of REM sleep (columns `sleep_rem`) these mammals get. The output might not look as expected!! To start to understand why, view the full contents of this column (i.e. `msleep$sleep_rem`). You will see some values "NA", meaning there is *missing data*. Missing data is very common - real life science (especially biology!) is tricky, and sometimes we can't gather as much data as we want. 
++ no hint
++ solution: median(msleep$sleep_rem)
+
+9. So, how do we calculate the median from the question above? We need to include the *second argument* `na.rm=TRUE` which tells median to ignore ("rm" for remove) NA's when performing calculations. See this code in action below, and then modify it to calculate the _mean_ of this column instead. 
++ baseline code: median(msleep$sleep_rem, na.rm = TRUE)
++ no hint
++ solution: mean(msleep$sleep_rem, na.rm = TRUE)
+
+10. The column `vore` is a *character* column - it contains strings rather than numbers. Let's examine this column using the function `unique()`, which returns all unique values in a given array - What are the unique vores in this dataset?
++ no baseline code
++ **Hint:** Remember, you can always look up how to use a function! Try running `?unique` if you're stuck.
++ solution: unique(msleep$vore)
+
+
