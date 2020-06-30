@@ -283,7 +283,7 @@ quiz(caption = "Multiple Choice",
 
 ``` 
   
-<div id="logical_q4-hint">
+<div id="variables_q4-hint">
 **Hint:**  We are learning to use variables whenever possible instead of the direct numbers. Using values in calculations rather than variables representing those values is called **hard-coding** and can lead to bugs!
 </div>
 
