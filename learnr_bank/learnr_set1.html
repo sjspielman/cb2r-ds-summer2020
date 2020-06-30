@@ -117,18 +117,6 @@ $(document).ready(function () {
 
 <div class="topics">
 
-<div id="section-resources-for-shemaiah" class="section level1">
-<h1>Resources for Shemaiah:</h1>
-<ul>
-<li><p><strong>Before you start</strong>, go through this tutorial carefully: <a href="https://rstudio.github.io/learnr/exercises.html">learnr exercises</a>.</p></li>
-<li><p>For these questions, you do not need a setup chunk (but we will once we start using packages!)</p></li>
-<li><p>Each question should have a corresponding <code>solution</code> chunk. IN that chunk, do not just type the answer - write out the code to get the answer (e.g. for q1 don’t put <code>30</code>, put <code>5*6</code>)</p></li>
-<li><p>Each question should have a corresponding hint. In this case, all hints are not actually code, but markdown text!! Therefore, you actually need to use HTML to write the hints instead of writing code chunks for hints (described in link above).</p>
-<ul>
-<li>If a hint is ever code, use a chunk instead.</li>
-</ul></li>
-<li><p>I’ve done set 1 question 1 below to show you exactly what I’m looking for.</p></li>
-</ul>
 <div id="section-set-1-using-r-as-a-calculator" class="section level3">
 <h3>Set 1: Using R as a calculator</h3>
 <ol style="list-style-type: decimal">
@@ -307,7 +295,6 @@ $(document).ready(function () {
 </div>
 <div id="section-set-3-defining-and-understanding-variables-in-r" class="section level3">
 <h3>Set 3: Defining and understanding variables in R</h3>
-<p>Please name these questions <code>variables_qX</code> where X is the number (1, 2, 3, …). Note: for question 1 here, actually write a regular code chunk (just keep it as is!), and then only write the multiple choice. These should not be within in a <code>quiz()</code> - make an indiviual code chunk for each question (see the top example under “Questions” <a href="https://blog.rstudio.com/2017/07/11/introducing-learnr/">here</a>).</p>
 <ol style="list-style-type: decimal">
 <li>The code example below defines a variable. Answer the multiple choice questions about this code:</li>
 </ol>
@@ -334,48 +321,28 @@ $(document).ready(function () {
 <script>if (Tutorial.triggerMathJax) Tutorial.triggerMathJax()</script>
 </div>
 </div></p>
-<p>MC1: What is the <em>name</em> of this variable? a) <code>&lt;-</code> b) y [CORRECT] c) 8.5 d) We can’t tell.</p>
-<p>MC2: What is the <em>value</em> of this variable? a) <code>&lt;-</code> b) y c) 8.5 [CORRECT] d) We can’t tell.</p>
-<p>MC3: What is the <em>type</em> of this variable? a) Character b) Numeric [CORRECT] c) Logical d) We can’t tell.</p>
 <!-- Shemaiah: for these questions, include the option:   exercise.lines=8     -->
 <ol start="2" style="list-style-type: decimal">
 <li>Using the code presented in question 1 to help guide you, define a variable named <code>banana_price</code> whose value is 0.55 (aka 55 cents).</li>
 </ol>
-<ul>
-<li><strong>Hint:</strong> Use the assignment operator <code>&lt;-</code> to assign the value 0.55 to the variable name <code>banana_price</code></li>
-<li>Solution: banana_price &lt;- 0.55
 <div class="tutorial-exercise" data-label="variables_q2" data-caption="Code" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="8">
 <script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":true,"error":false,"message":true,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
-</div></li>
-</ul>
-<div id="section-logical_q2-hint">
+</div>
+<div id="section-variables_q2-hint">
 <p><strong>Hint:</strong> Use the assignment operator <code>&lt;-</code> to assign the value 0.55 to the variable name <code>banana_price</code></p>
 </div>
 <ol start="3" style="list-style-type: decimal">
 <li>Again, define the <code>banana_price</code> variable (since these questions don’t communicate with each other!!). Use R as a calculator to determine the cost of 17 bananas.</li>
 </ol>
-<ul>
-<li><strong>Hint:</strong> Perform this operation using the <code>banana_price</code> variable itself.</li>
-<li>Solution:</li>
-</ul>
-<pre><code>banana_price &lt;- 0.55
-banana_price * 17</code></pre>
 <div class="tutorial-exercise" data-label="variables_q3" data-caption="Code" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="8">
 <script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":true,"error":false,"message":true,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
 </div>
-<div id="section-logical_q3-hint">
+<div id="section-variables_q3-hint">
 <p><strong>Hint:</strong> Perform this operation using the <code>banana_price</code> variable itself.</p>
 </div>
 <ol start="4" style="list-style-type: decimal">
 <li>Again, define the <code>banana_price</code> variable. Define a second variable called <code>num_bananas</code> with the value for how many bananas you’re buying. Using both your variables, use R as a calculator to calculate the total cost.</li>
 </ol>
-<ul>
-<li><strong>Hint:</strong> We are learning to use variables whenever possible instead of the direct numbers. Using values in calculations rather than variables representing those values is called <strong>hard-coding</strong> and can lead to bugs!</li>
-<li>Solution:</li>
-</ul>
-<pre><code>banana_price &lt;- 0.55
-num_bananas &lt;- 17
-banana_price * num_bananas</code></pre>
 <div class="tutorial-exercise" data-label="variables_q4" data-caption="Code" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="8">
 <script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":true,"error":false,"message":true,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
 </div>
@@ -385,13 +352,6 @@ banana_price * num_bananas</code></pre>
 <ol start="5" style="list-style-type: decimal">
 <li>Again, define your two variables, <code>banana_price</code> and <code>num_bananas</code>. Again calculate the total cost using these variables, <em>but this time</em>, save the output to a new variable called <code>total_cost</code>. Output the final value of <code>total_cost</code> by simply typing the variable name on its own line.</li>
 </ol>
-<ul>
-<li>Solution:</li>
-</ul>
-<pre><code>banana_price &lt;- 0.55
-num_bananas &lt;- 17
-total_cost &lt;- banana_price * num_bananas
-total_cost</code></pre>
 <div class="tutorial-exercise" data-label="variables_q5" data-caption="Code" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="8">
 <script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":true,"error":false,"message":true,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
 </div>
@@ -399,36 +359,15 @@ total_cost</code></pre>
 <ol start="6" style="list-style-type: decimal">
 <li>Let’s work with <em>logical operations</em> and variables. Imagine you have $5 to spend at the grocery store. Can you afford to buy 30 bananas (you are apparently making <em>a lot</em> of quarantine banana bread)? To answer this question, first <em>define</em> four variables (<code>banana_price</code>, <code>num_bananas</code>[ but what’s the value this time?!], <code>total_cost</code>, and <code>total_money</code> which represents your budget). Then, use logical operations to compare <code>total_cost</code> and <code>total_money</code>. You should arrive at an answer of TRUE <em>if it is affordable</em>, and FALSE if you can’t buy this many bananas.</li>
 </ol>
-<ul>
-<li><strong>Hint:</strong> A TRUE solution is one where <code>total_money</code> is <em>greater than or equal to</em> the <code>total_cost</code>. Or, where <code>total_cost</code> is <em>less than or equal to</em> <code>total_money</code>.</li>
-<li>Solution:</li>
-</ul>
-<pre><code>banana_price &lt;- 0.55
-num_bananas &lt;- 30
-total_money &lt;- 5
-total_cost &lt;- banana_price * num_bananas
-total_cost &lt;= total_money</code></pre>
 <div class="tutorial-exercise" data-label="variables_q6" data-caption="Code" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="8">
 <script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":true,"error":false,"message":true,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
 </div>
-<div id="section-logical_q6-hint">
+<div id="section-variables_q6-hint">
 <p><strong>Hint:</strong> A TRUE solution is one where <code>total_money</code> is <em>greater than or equal to</em> the <code>total_cost</code>. Or, where <code>total_cost</code> is <em>less than or equal to</em> <code>total_money</code>.</p>
 </div>
 <ol start="7" style="list-style-type: decimal">
 <li>The grocery store visit is getting more interesting. Sure, banana bread is all well and good, but it’s certainly not as good as chocolate-chip banana bread. You’ve recently come into some money, so you now have $20 to spend!! You want to buy 4 bags of chocolate chips that cost $1.50 each as well as 16 bananas which, due to some evil price-gouging, now cost 60 cents ($0.60) each. Can you afford this purchase?</li>
 </ol>
-<ul>
-<li>Hint-1: Make sure to define all variables with <em>meaningful variable names</em> first, <em>then</em> perform calculations to determine the <code>total_cost</code>, and then compare <code>total_cost</code> to <code>total_money</code>. In the end, you will have created six variables.</li>
-<li>Hint-2: Don’t put spaces into your variable names <em>ever</em>. Instead, use underscores to represent spaces.</li>
-<li>Solution:</li>
-</ul>
-<pre><code>banana_price &lt;- 0.6
-num_bananas &lt;- 16
-choc_price &lt;- 1.5
-num_choc  &lt;- 4
-total_money &lt;- 20
-total_cost &lt;- (banana_price * num_bananas) + (choc_price * num_choc)
-total_cost &lt;= total_money</code></pre>
 <div class="tutorial-exercise" data-label="variables_q7" data-caption="Code" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="8">
 <script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":true,"error":false,"message":true,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
 </div>
@@ -438,6 +377,42 @@ total_cost &lt;= total_money</code></pre>
 <div class="tutorial-exercise-support" data-label="variables_q7-hint-2" data-caption="Code" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <pre class="text"><code>#Don&#39;t put spaces into your variable names *ever*. Instead, use underscores to represent spaces.</code></pre>
 </div>
+</div>
+<div id="section-set-3-answer-key" class="section level3">
+<h3>Set 3: Answer Key</h3>
+<pre class="r"><code>#Solution to Question 2
+ banana_price &lt;- 0.55</code></pre>
+<pre class="r"><code>#Solution to Question 3
+banana_price &lt;- 0.55
+banana_price * 17</code></pre>
+<pre><code>## [1] 9.35</code></pre>
+<pre class="r"><code>#Solution to Question 4
+banana_price &lt;- 0.55
+num_bananas &lt;- 17
+banana_price * num_bananas</code></pre>
+<pre><code>## [1] 9.35</code></pre>
+<pre class="r"><code>#Solution to Question 5
+banana_price &lt;- 0.55
+num_bananas &lt;- 17
+total_cost &lt;- banana_price * num_bananas
+total_cost</code></pre>
+<pre><code>## [1] 9.35</code></pre>
+<pre class="r"><code>#Solution to Question 6
+banana_price &lt;- 0.55
+num_bananas &lt;- 30
+total_money &lt;- 5
+total_cost &lt;- banana_price * num_bananas
+total_cost &lt;= total_money</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<pre class="r"><code>#Solution to Question 7
+banana_price &lt;- 0.6
+num_bananas &lt;- 16
+choc_price &lt;- 1.5
+num_choc  &lt;- 4
+total_money &lt;- 20
+total_cost &lt;- (banana_price * num_bananas) + (choc_price * num_choc)
+total_cost &lt;= total_money</code></pre>
+<pre><code>## [1] TRUE</code></pre>
 
 <script type="application/shiny-prerendered" data-context="server-start">
 knitr::opts_chunk$set(echo = TRUE)
@@ -547,15 +522,15 @@ output$`tutorial-exercise-logical_q9-output` <- renderUI({
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
-learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "quiz1-1", question = structure("What is the <em>name<\u002fem> of this variable?", html = TRUE, class = c("html", "character")), answers = list(structure(list(id = "lnr_ans_9587241",     option = "`<-`", value = "`<-`", label = structure("<code>&lt;-<\u002fcode>", html = TRUE, class = c("html",     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer")), structure(list(id = "lnr_ans_ef64e52",     option = "y", value = "y", label = structure("y", html = TRUE, class = c("html",     "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer")), structure(list(id = "lnr_ans_b2fb4a2",     option = "8.5", value = "8.5", label = structure("8.5", html = TRUE, class = c("html",     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer")), structure(list(id = "lnr_ans_c7f7776",     option = "We can't tell.", value = "We can't tell.", label = structure("We can&#39;t tell.", html = TRUE, class = c("html",     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer"))), button_labels = list(submit = structure("Submit Answer", html = TRUE, class = c("html", "character")), try_again = structure("Try Again", html = TRUE, class = c("html", "character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", "character")), try_again = structure("Incorrect", html = TRUE, class = c("html", "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", "character")), message = NULL, post_message = NULL), ids = list(    answer = "quiz1-1-answer", question = "quiz1-1"), loading = structure("<strong>Loading:<\u002fstrong> \nWhat is the <em>name<\u002fem> of this variable?\n<br/><br/><br/>", html = TRUE, class = c("html", "character")), random_answer_order = FALSE, allow_retry = FALSE,     seed = 1193910813.94404, options = list()), class = c("learnr_radio", "tutorial_question")))
+learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "quiz1-1", question = structure("What is the <em>name<\u002fem> of this variable?", html = TRUE, class = c("html", "character")), answers = list(structure(list(id = "lnr_ans_e85da71",     option = "`<-`", value = "`<-`", label = structure("<code>&lt;-<\u002fcode>", html = TRUE, class = c("html",     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer")), structure(list(id = "lnr_ans_78eb3b9",     option = "y", value = "y", label = structure("y", html = TRUE, class = c("html",     "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer")), structure(list(id = "lnr_ans_f7fafd9",     option = "8.5", value = "8.5", label = structure("8.5", html = TRUE, class = c("html",     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer")), structure(list(id = "lnr_ans_e369ecf",     option = "We can't tell.", value = "We can't tell.", label = structure("We can&#39;t tell.", html = TRUE, class = c("html",     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer"))), button_labels = list(submit = structure("Submit Answer", html = TRUE, class = c("html", "character")), try_again = structure("Try Again", html = TRUE, class = c("html", "character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", "character")), try_again = structure("Incorrect", html = TRUE, class = c("html", "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", "character")), message = NULL, post_message = NULL), ids = list(    answer = "quiz1-1-answer", question = "quiz1-1"), loading = structure("<strong>Loading:<\u002fstrong> \nWhat is the <em>name<\u002fem> of this variable?\n<br/><br/><br/>", html = TRUE, class = c("html", "character")), random_answer_order = FALSE, allow_retry = FALSE,     seed = 478706751.777085, options = list()), class = c("learnr_radio", "tutorial_question")))
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
-learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "quiz1-2", question = structure("What is the <em>value<\u002fem> of this variable?", html = TRUE, class = c("html", "character")), answers = list(structure(list(id = "lnr_ans_2adcf33",     option = "`<-`", value = "`<-`", label = structure("<code>&lt;-<\u002fcode>", html = TRUE, class = c("html",     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer")), structure(list(id = "lnr_ans_7cc6b7c",     option = "y", value = "y", label = structure("y", html = TRUE, class = c("html",     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer")), structure(list(id = "lnr_ans_15e1ab9",     option = "8.5", value = "8.5", label = structure("8.5", html = TRUE, class = c("html",     "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer")), structure(list(id = "lnr_ans_638724e",     option = "We can't tell.", value = "We can't tell.", label = structure("We can&#39;t tell.", html = TRUE, class = c("html",     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer"))), button_labels = list(submit = structure("Submit Answer", html = TRUE, class = c("html", "character")), try_again = structure("Try Again", html = TRUE, class = c("html", "character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", "character")), try_again = structure("Incorrect", html = TRUE, class = c("html", "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", "character")), message = NULL, post_message = NULL), ids = list(    answer = "quiz1-2-answer", question = "quiz1-2"), loading = structure("<strong>Loading:<\u002fstrong> \nWhat is the <em>value<\u002fem> of this variable?\n<br/><br/><br/>", html = TRUE, class = c("html", "character")), random_answer_order = FALSE, allow_retry = FALSE,     seed = 2006459490.06567, options = list()), class = c("learnr_radio", "tutorial_question")))
+learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "quiz1-2", question = structure("What is the <em>value<\u002fem> of this variable?", html = TRUE, class = c("html", "character")), answers = list(structure(list(id = "lnr_ans_679ecf9",     option = "`<-`", value = "`<-`", label = structure("<code>&lt;-<\u002fcode>", html = TRUE, class = c("html",     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer")), structure(list(id = "lnr_ans_c5ba5dd",     option = "y", value = "y", label = structure("y", html = TRUE, class = c("html",     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer")), structure(list(id = "lnr_ans_71b1214",     option = "8.5", value = "8.5", label = structure("8.5", html = TRUE, class = c("html",     "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer")), structure(list(id = "lnr_ans_c0d122b",     option = "We can't tell.", value = "We can't tell.", label = structure("We can&#39;t tell.", html = TRUE, class = c("html",     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer"))), button_labels = list(submit = structure("Submit Answer", html = TRUE, class = c("html", "character")), try_again = structure("Try Again", html = TRUE, class = c("html", "character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", "character")), try_again = structure("Incorrect", html = TRUE, class = c("html", "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", "character")), message = NULL, post_message = NULL), ids = list(    answer = "quiz1-2-answer", question = "quiz1-2"), loading = structure("<strong>Loading:<\u002fstrong> \nWhat is the <em>value<\u002fem> of this variable?\n<br/><br/><br/>", html = TRUE, class = c("html", "character")), random_answer_order = FALSE, allow_retry = FALSE,     seed = 2025738156.55669, options = list()), class = c("learnr_radio", "tutorial_question")))
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
-learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "quiz1-3", question = structure("What is the <em>type<\u002fem> of this variable?", html = TRUE, class = c("html", "character")), answers = list(structure(list(id = "lnr_ans_7300074",     option = "Character", value = "Character", label = structure("Character", html = TRUE, class = c("html",     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer")), structure(list(id = "lnr_ans_45de32d",     option = "Numeric", value = "Numeric", label = structure("Numeric", html = TRUE, class = c("html",     "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer")), structure(list(id = "lnr_ans_5801387",     option = "Logical", value = "Logical", label = structure("Logical", html = TRUE, class = c("html",     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer")), structure(list(id = "lnr_ans_66cfcfe",     option = "We can't tell.", value = "We can't tell.", label = structure("We can&#39;t tell.", html = TRUE, class = c("html",     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer"))), button_labels = list(submit = structure("Submit Answer", html = TRUE, class = c("html", "character")), try_again = structure("Try Again", html = TRUE, class = c("html", "character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", "character")), try_again = structure("Incorrect", html = TRUE, class = c("html", "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", "character")), message = NULL, post_message = NULL), ids = list(    answer = "quiz1-3-answer", question = "quiz1-3"), loading = structure("<strong>Loading:<\u002fstrong> \nWhat is the <em>type<\u002fem> of this variable?\n<br/><br/><br/>", html = TRUE, class = c("html", "character")), random_answer_order = FALSE, allow_retry = FALSE,     seed = 1389436721.35299, options = list()), class = c("learnr_radio", "tutorial_question")))
+learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "quiz1-3", question = structure("What is the <em>type<\u002fem> of this variable?", html = TRUE, class = c("html", "character")), answers = list(structure(list(id = "lnr_ans_5114fe8",     option = "Character", value = "Character", label = structure("Character", html = TRUE, class = c("html",     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer")), structure(list(id = "lnr_ans_bf0690f",     option = "Numeric", value = "Numeric", label = structure("Numeric", html = TRUE, class = c("html",     "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer")), structure(list(id = "lnr_ans_e74971",     option = "Logical", value = "Logical", label = structure("Logical", html = TRUE, class = c("html",     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer")), structure(list(id = "lnr_ans_b347ce8",     option = "We can't tell.", value = "We can't tell.", label = structure("We can&#39;t tell.", html = TRUE, class = c("html",     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", "tutorial_quiz_answer"))), button_labels = list(submit = structure("Submit Answer", html = TRUE, class = c("html", "character")), try_again = structure("Try Again", html = TRUE, class = c("html", "character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", "character")), try_again = structure("Incorrect", html = TRUE, class = c("html", "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", "character")), message = NULL, post_message = NULL), ids = list(    answer = "quiz1-3-answer", question = "quiz1-3"), loading = structure("<strong>Loading:<\u002fstrong> \nWhat is the <em>type<\u002fem> of this variable?\n<br/><br/><br/>", html = TRUE, class = c("html", "character")), random_answer_order = FALSE, allow_retry = FALSE,     seed = 1437957612.8304, options = list()), class = c("learnr_radio", "tutorial_question")))
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
@@ -609,7 +584,6 @@ output$`tutorial-exercise-variables_q7-output` <- renderUI({
 {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages","version"]},"class":{"type":"character","attributes":{},"value":["data.frame"]},"row.names":{"type":"integer","attributes":{},"value":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80]}},"value":[{"type":"character","attributes":{},"value":["assertthat","backports","base","blob","broom","cellranger","checkmate","cli","colorspace","compiler","crayon","datasets","DBI","dbplyr","digest","dplyr","ellipsis","evaluate","fansi","fastmap","forcats","fs","generics","ggplot2","glue","graphics","grDevices","grid","gtable","haven","hms","htmltools","htmlwidgets","httpuv","httr","jsonlite","knitr","later","lattice","learnr","lifecycle","lubridate","magrittr","markdown","methods","mime","modelr","munsell","nlme","pillar","pkgconfig","promises","purrr","R6","Rcpp","readr","readxl","reprex","rlang","rmarkdown","rprojroot","rstudioapi","rvest","scales","shiny","stats","stringi","stringr","tibble","tidyr","tidyselect","tidyverse","tools","utils","vctrs","withr","xfun","xml2","xtable","yaml"]},{"type":"character","attributes":{},"value":["0.2.1","1.1.8","3.6.2","1.2.1","0.5.6","1.1.0","2.0.0","2.0.2","1.4-1","3.6.2","1.3.4","3.6.2","1.1.0","1.4.4","0.6.25","1.0.0","0.3.1","0.14","0.4.1","1.0.1","0.5.0","1.4.1","0.0.2","3.3.2","1.4.1","3.6.2","3.6.2","3.6.2","0.3.0","2.3.1","0.5.3","0.5.0","1.5.1","1.5.4","1.4.1","1.6.1","1.29","1.1.0.1","0.20-41","0.10.1","0.2.0","1.7.9","1.5","1.1","3.6.2","0.9","0.1.8","0.5.0","3.1-148","1.4.4","2.0.3","1.1.1","0.3.4","2.4.1","1.0.4.6","1.3.1","1.3.1","0.3.0","0.4.6","2.3","1.3-2","0.11","0.3.5","1.1.1","1.4.0.2","3.6.2","1.4.6","1.4.0","3.0.1","1.1.0","1.1.0","1.3.0","3.6.2","3.6.2","0.3.1","2.2.0","0.15","1.3.2","1.8-4","2.2.1"]}]}]}
 </script>
 <!--/html_preserve-->
-</div>
 </div>
 
 </div> <!-- topics -->
