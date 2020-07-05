@@ -388,7 +388,11 @@ msleep$awake
 
 ``` {r, msleep_q7-answer}
 #Solution to Question 7
-#just run those functions, spielman is lazy ;)
+median(msleep$awake)
+range(msleep$awake)
+min(msleep$awake)
+max(msleep$awake)
+sd(msleep$awake)
 ```
 
 ``` {r, msleep_q8-answer}
