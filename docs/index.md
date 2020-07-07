@@ -3,7 +3,7 @@ layout: index
 title: Home
 ---
 
-This website hosts materials designed by [Stephanie J. Spielman](https://spielmanlab.github.io) (unless otherwise specified), with assistance from Shemaiah Sotrah (senior undergraduate at Rowan University, 2020-21). All materials ([source](https://github.com/sjspielman/cb2r-ds-summer2020/) are released under a CC-BY-4.0 License.
+This website hosts materials designed by [Stephanie J. Spielman](https://spielmanlab.github.io) (unless otherwise specified), with assistance from Shemaiah Sotrah (senior undergraduate at Rowan University, 2020-21). All materials ([source](https://github.com/sjspielman/cb2r-ds-summer2020/) are released under a CC-BY-4.0 License. All workshop participants are expected to honor the [R Conference Code of Conduct](https://www.r-project.org/coc.html) and the [R Developer Code of Conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct/).
 
 ![Data science pipeline](https://d33wubrfki0l68.cloudfront.net/571b056757d68e6df81a3e3853f54d3c76ad6efc/32d37/diagrams/data-science.png)
 
@@ -30,11 +30,12 @@ This website hosts materials designed by [Stephanie J. Spielman](https://spielma
 
 # Resources
 
-
 + [Fundamentals of Data Visualization](https://serialmentor.com/dataviz/) by Claus O. Wilke
   + Not specific to any programming language - just about principles and styles in data visualization
 + [R for Data Science](https://r4ds.had.co.nz/) by Garrett Grolemund and Hadley Wickham
   + A tour through R's `tidyverse`
++ [R4DS Learning Community](https://www.rfordatasci.com/)
+  + See also [#tidytuesday](https://twitter.com/thomas_mock/status/1280174453410934784)
 + [Data Visualization: A practical Introduction](https://socviz.co/) by Kieran Healy
   + Excellent book focused on `ggplot2`
 + [RStudio Resources](https://resources.rstudio.com/)
@@ -42,6 +43,7 @@ This website hosts materials designed by [Stephanie J. Spielman](https://spielma
 + [`tidyverse` homepage](https://www.tidyverse.org/)
   + Official documentation and cheatsheets
 + Other online classes
+  + [The Research Cycle (specifically, the first 5 days of class)](https://rgup.gitlab.io/research_cycle/index.html)
   + [STAT545 Resources (**EXCELLENT** background)](https://stat545.com/)
   + [Introduction to Data Science e-book](https://rafalab.github.io/dsbook/)
   + [Calling Bullshit Course Website](https://callingbullshit.org/) by Carl Bergstrom and Jevin West
