@@ -1,4 +1,5 @@
 <div id="sidebar">
+
   <header>
     <{% if page.layout == "index" %}h1{% else %}div{% endif %} class="site-title">
       <a href="{{ "/" | relative_url }}">
@@ -10,6 +11,9 @@
     </{% if page.layout == "index" %}h1{% else %}div{% endif %}>
     <p class="lead">{{ site.description }}</p>
   </header>
+  <br><br><br><br>
+  <img src="CB2R_Logo.png" alt="cb2r_logo">
+
   {% include sidebar-nav-links.html %}
 
   {% if site.version %}
