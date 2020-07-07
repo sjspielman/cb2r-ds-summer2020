@@ -19,7 +19,7 @@ library(dplyr)
 
 ## Set 1: Identifying data types
 <br>
-Determine what type of data each of the following is. In addition, with your group, come up with THREE different potential values for the variable. Use the example to help guide you:
+Determine what type of data each of the following is. In addition, with your group, come up with THREE (unless only two are possible for binary data!) different potential values for the variable. Use the example to help guide you:
 
 
 Example: **Square footage of a building** is *numeric continuous*. Example values are 1000, 5000, 300.5 - aka, random numbers which could be a building's square footage. I would not include a value -100, for example.
@@ -33,7 +33,7 @@ quiz(caption = "",
               answer("Numeric continuous"),
               answer("Categorical nominal"),
               answer("Categorical ordinal"),
-              answer("Not enough information is provided"),
+              answer("Categorical binary"),
               allow_retry = TRUE
 
               ),
@@ -42,7 +42,15 @@ quiz(caption = "",
               answer("Numeric continuous", correct = TRUE),
               answer("Categorical nominal"),
               answer("Categorical ordinal"),
-              answer("Not enough information is provided"),
+              answer("Categorical binary"),
+              allow_retry = TRUE
+              ),
+     question("What type of data is *answers to a yes or no question*?",
+              answer("Numeric discrete"),
+              answer("Numeric continuous"),
+              answer("Categorical nominal"),
+              answer("Categorical ordinal"),
+              answer("Categorical binary", correct = TRUE),
               allow_retry = TRUE
               ),
      question("What type of data is *the colors in a painting*?",
@@ -50,7 +58,7 @@ quiz(caption = "",
               answer("Numeric continuous"),
               answer("Categorical nominal", correct = TRUE),
               answer("Categorical ordinal"),
-              answer("Not enough information is provided"),
+              answer("Categorical binary"),
               allow_retry = TRUE
               ),
      question("What type of data is *the movie time in seconds*?",
@@ -58,7 +66,7 @@ quiz(caption = "",
               answer("Numeric continuous", correct = TRUE),
               answer("Categorical nominal"),
               answer("Categorical ordinal"),
-              answer("Not enough information is provided"),
+              answer("Categorical binary"),
               allow_retry = TRUE
               ),
      question("What type of data is the *letter grade for a class*?",
@@ -66,7 +74,7 @@ quiz(caption = "",
               answer("Numeric continuous"),
               answer("Categorical nominal"),
               answer("Categorical ordinal", correct = TRUE),
-              answer("Not enough information is provided"),
+              answer("Categorical binary"),
               allow_retry = TRUE
               ),
      question("What type of data is the *number of legs an animal has*?",
@@ -74,7 +82,7 @@ quiz(caption = "",
               answer("Numeric continuous"),
               answer("Categorical nominal"),
               answer("Categorical ordinal"),
-              answer("Not enough information is provided"),
+              answer("Categorical binary"),
               allow_retry = TRUE
               ),
      question("What type of data is the *types of cheese*?",
@@ -82,7 +90,7 @@ quiz(caption = "",
               answer("Numeric continuous"),
               answer("Categorical nominal"),
               answer("Categorical ordinal", correct = TRUE),
-              answer("Not enough information is provided"),
+              answer("Categorical binary"),
               allow_retry = TRUE
               ),
      question("What type of data is the *belt level in karate*?",
@@ -90,7 +98,7 @@ quiz(caption = "",
               answer("Numeric continuous"),
               answer("Categorical nominal", correct = TRUE),
               answer("Categorical ordinal"),
-              answer("Not enough information is provided"),
+              answer("Categorical binary"),
               allow_retry = TRUE
               ),
      question("What type of data is the *amount of sugar in an ice cream cone*?",
@@ -98,7 +106,7 @@ quiz(caption = "",
               answer("Numeric continuous"),
               answer("Categorical nominal"),
               answer("Categorical ordinal"),
-              answer("Not enough information is provided"),
+              answer("Categorical binary"),
               allow_retry = TRUE
               ),
      question("What type of data is the *average number of children per family*?",
@@ -106,7 +114,7 @@ quiz(caption = "",
               answer("Numeric continuous", correct = TRUE),
               answer("Categorical nominal"),
               answer("Categorical ordinal"),
-              answer("Not enough information is provided"),
+              answer("Categorical binary"),
               allow_retry = TRUE
               )
      )
@@ -259,6 +267,18 @@ quiz(caption = "",
               answer("number_of_protons"),
               answer("electronegativity"),
               answer("metal_type"),
+              answer("None of the above"),
+              allow_retry = TRUE
+              ),
+          question("Which variables are *categorical binary*? Select all that apply.",
+              answer("element_name"),
+              answer("element_abbr"),
+              answer("hardsoft_acidbase_theory"),
+              answer("atomic_mass"),
+              answer("number_of_protons"),
+              answer("electronegativity"),
+              answer("metal_type"),
+              answer("None of the above", correct = TRUE),
               allow_retry = TRUE
               )
      )
