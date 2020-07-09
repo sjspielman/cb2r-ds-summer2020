@@ -1,0 +1,638 @@
+---
+title: "Introduction to data wrangling and tidy data"
+#subtitle: "⚔<br/>with xaringan"
+author: "Stephanie J. Spielman"
+institute: "CB2R Data Science Workshop, Summer 2020"
+#date: "2016/12/12 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: [default, metropolis, metropolis-fonts]
+    nature:
+      highlightStyle:  rainbow
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+<style>
+.remark-slide-content > h1 {
+  font-size:42px;
+  margin-top: -100px;
+}
+</style>
+```{css, echo=F, include=F}
+
+code.r.hljs.remark-code{
+#  background-color: #cccccc;
+    font-size: 13px;
+    font-family:Monaco;
+}
+code.r.hljs.remark-inline-code { 
+    font-size: 13px;
+    font-family:Monaco;
+}
+
+.remark-slide-content > h2:first-of-type {
+  margin-top: 0px;
+}
+
+@media print {
+  .has-continuation {
+    display: block !important;
+  }
+}
+
+
+pre {
+  white-space: pre-wrap;
+  
+}
+
+ul:first-child, ol:first-child {
+    margin: 0;
+}
+
+.pull-left2{
+  float: left;
+  width: 85%;
+}
+
+.pull-right2{
+  float: right;
+  width: 30%;
+}
+```
+
+<!--
+The option highlightLines: true of nature will highlight code lines that start with *, or are wrapped in {{ }}, or have trailing comments #<<;
+
+```{r, highlight.output=c(1, 3)}
+head(iris)
+```
+
+names(xaringan:::list_css())
+-->
+
+
+
+```{r setup, include=FALSE, echo=FALSE}
+options(htmltools.dir.version = FALSE)
+library(xaringan)
+library(xaringanExtra)
+library(tidyverse) 
+xaringanExtra::use_editable(expires = 1)
+xaringanExtra::use_panelset()
+xaringanExtra::use_fit_screen() ## opt+F
+
+seals <- read_csv("../data/seals.csv") %>%
+  rename(seal = Seal, 
+         oxygen_use_nonfeeding = Oxygen_use_nonfeeding,
+         oxygen_use_feeding = Oxygen_use_feeding) %>%
+  filter(seal <=5)
+seals %>% 
+  pivot_longer(c(oxygen_use_nonfeeding,oxygen_use_feeding), names_to = "experiment_type", values_to = "oxygen_use") %>%
+  mutate(experiment_type = ifelse(experiment_type == "oxygen_use_nonfeeding", "nonfeeding", "feeding")) -> tidy_seals
+
+plant <- as_tibble(CO2) %>%
+  rename(plant_id = Plant,
+         origin = Type,
+         treatment = Treatment,
+         co2_conc = conc,
+         co2_rate = uptake) %>%
+  mutate(plant_id = factor(plant_id))
+```
+
+---
+background-image: url("https://tidyverse.tidyverse.org/articles/tidyverse-logo.png")
+background-position: center
+background-size: 50%
+
+# Enter the tidyverse
+
+
+---
+background-image: url("https://lsru.github.io/tv_course/img/01_tidyverse_data_science.png")
+background-position: center
+background-size: contain
+# Enter the tidyverse
+---
+
+# We will be <del>learning</del> starting to learn...
+
++ `dplyr` ("dee-plier") for manipulating ("wrangling") data
+
++ `tidyr` ("tidy-are") for cleaning and *tidying* data
+
++ `ggplot2` ("gee-gee-plot") for data visualization
+
++ `tibble` ("tibble") for making data frames more enjoyable to work with (incidentally)
+
++ `readr` ("read-are") and `readxl` ("read-excel") for reading and writing data
+
++ `rmarkdown` ("are-markdown") for producing professional documents
+
+---
+class: top, center
+# The philosophy of tidy data
+
+
+```{r out.width = '1000px', echo=F}
+knitr::include_graphics("static/img/tidydata.png")
+```
+
+---
+background-image:url("https://res.cloudinary.com/syknapptic/image/upload/v1521304412/messy_tidy_qq4ba9.png")
+background-position: center
+background-size: 80%
+
+# "Messy" vs tidy data
+
+---
+background-image:url("static/img/seal_diver.jpg")
+background-position: 98% 15%
+background-size: 30%
+
+# Which version is tidy?
+
+First, identify what the *variables* are in the dataset (the *data types* can help us!!)
+
+```{r, echo=FALSE}
+seals
+```
+
+
+```{r, echo=FALSE}
+tidy_seals
+```   
+
+---
+background-image:url("static/img/data-transformation-cheatsheet-thumbs.png")
+background-position: center
+background-size: contain
+
+# Data wrangling with dplyr
+
+**I do not know all of the CHEATSHEET** (let alone the whole package!). But, I _know about_ the cheatsheet.
+
+---
+
+# Data wrangling with dplyr
+
+### The greatest hits of `dplyr` verbs
+
+.pull-left[
+##### This lesson
+  + `glimpse()` as an alternative to `str()` or `head()`
+  + `select()` subsets **columns**
+  + `filter()` subsets **rows**
+  + `mutate()` adds new columns
+  + `rename()` changes the names of columns
+  + `arrange()` changes the order of rows
+]
+
+.pull-right[
+##### Future lessons
+  + `group_by()` and `ungroup()` 
+  + `summarize()` 
+  + `tally()` 
+  + `count()`
+
+##### Time-pending lessons
+  + `bind_rows()`
+  + `bind_cols()`
+  + `left_join()` and friends
+]
+--- 
+
+<!--
+# Plus, a couple tidyr verbs
+
++ `drop_na()` drops rows containing missing values
++ `replace_na()` replaces NAs with specified values
+-->
+
+---
+class: top, center
+
+# The great and powerful **pipe**
+
+```{r out.width = '400px', echo=F}
+knitr::include_graphics("static/img/MagrittePipe.jpg")
+```
+
+--
+
+```{r out.width = '200px', echo=F}
+knitr::include_graphics("static/img/magrittr.png")
+```
+
+---
+
+# Examples of piping, and formatting goals
+
+```{r}
+## tired
+log(5)
+```
+
+--
+
+```{r}
+## Wired
+5 %>% log()
+```
+
+--
+
+```{r}
+## ON FIRE
+5 %>%
+  log()
+```
+
+--
+
+```{r}
+## KILN-LEVEL FIRE
+5 %>%
+  log(10)
+```
+
+
+---
+
+# Cold tolerance experiment on grass species
+
+```{r}
+head(plant)
+nrow(plant)
+ncol(plant)
+```
+
+---
+# Loading libraries
+
+```{r}
+## LOAD THE DPLYR LIBRARY
+library(dplyr) # must load for each R session
+```
+
+--
+
+```{r}
+## your first dplyr function!
+glimpse(plant)
+```
+
+---
+# First, ALWAYS LOOK AT YOUR DATA
+
+```{r}
+levels(plant$plant_id)
+```
+<br><br>
+```{r}
+levels(plant$origin)
+```
+<br><br>
+```{r}
+levels(plant$treatment)
+```
+
+---
+# Subsetting columns with select()
+
+```{r}
+names(plant)
+```
+
+--
+
+.pull-left[
+#### Select `plant_id` and `origin`
+```{r}
+plant %>%
+  select(plant_id, origin) 
+```
+]
+
+.pull-right[
+#### Select all columns *except* `treatment`
+```{r}
+plant %>%
+  select(-treatment) 
+```
+]
+---
+
+# The power of the pipe
+
+.pull-left[
+```{r}
+plant %>%
+  select(plant_id, origin) 
+```
+]
+
+--
+
+.pull-right[
+```{r}
+plant %>%
+  select(plant_id, origin) %>%
+  head()
+```
+
+
+```{r}
+plant %>%
+  select(plant_id, origin) %>%
+  head(2)
+```
+]
+
+---
+# Subsetting rows with filter()
+
+```{r}
+names(plant)
+```
+
+--
+
+#### Only plants from Mississippi
+```{r}
+plant %>%
+  filter(origin == "Mississippi")
+```
+
+---
+# Subsetting rows with filter()
+
+```{r}
+names(plant)
+```
+
+
+#### Only plants with rate of co2 uptake of at least 30
+```{r}
+plant %>%
+  filter(co2_rate >= 30)
+```
+
+---
+# Subsetting rows with filter()
+
+```{r}
+names(plant)
+```
+
+#### Only Mississippi plants with rate of at least 30
+```{r}
+plant %>%
+  # Use a , for "and" (&) in filter()
+  filter(co2_rate >= 30, origin == "Mississippi") 
+```
+
+
+---
+# Subsetting rows with filter()
+
+#### Only plants exposed to a co2_conc of 500 or 675
+```{r}
+plant %>%
+  filter(co2_conc == 500, co2_conc == 675) 
+```
+--
+
+```{r}
+plant %>%
+  ## Need to use the OR operator |
+  filter(co2_conc == 500 | co2_conc == 675) 
+```
+
+---
+# Introducing the %in% operator
+
+```{r, collapse=TRUE}
+"Stephanie" %in% c("Stephanie", "Spielman")
+
+10 %in% 15:20
+```
+
+--
+
+#### Only plants exposed to a co2_conc of 500 or 675
+
+```{r}
+plant %>%
+  filter(co2_conc %in% c(675, 500)) %>%
+  head(5) # to fit on slide
+```
+
+
+---
+
+# Combining dplyr verbs
+
+#### Only Mississippi plants with rate of at least 30, and remove origin column
+```{r}
+plant %>%
+  filter(co2_rate >= 30, origin == "Mississippi") %>%
+  select(-origin) %>%
+  head() ## to fit on slides!
+```
+
+--
+```{r}
+# we can SAVE the output!!
+plant %>%
+  filter(co2_rate >= 30, origin == "Mississippi") %>%
+  select(-origin) -> miss_plant_over30
+```
+
+---
+
+# And don't forget to COMMENT!!
+
+```{r}
+plant %>%
+  # Keep only plants with update >= 30 and who are from mississippi
+  filter(co2_rate >= 30, origin == "Mississippi") %>%
+  # Remove the origin column
+  select(-origin) -> miss_plant_over30
+```
+
+
+---
+
+# A note about namespaces
+
++ `filter()` and `select()` are functions in the `dplyr` package (library)
+
++ `select()` is ALSO a function in another library called `MASS`
+  + Package that accompanies book "Modern Applied Statistics with S"
+
++ `filter()` is ALSO a function in another library called `stats`
+  + Package that comes with R
+
++ **How does R know which `filter()` or `select()` you are using?**
+
+---
+
+# A note about namespaces
+
++ All variables, functions, definitions of any kind are part of a **namespace**
++ R searches the *most recently loaded* namespace first
+  + If you get a weird error, you probably didn't load the library
+
+--
+
++ You can always *explicitly* use functions as `namespace::function()`
+  + `dplyr::filter()`
+  + `dplyr::select()`
+
+---
+
+# Creating new columns with mutate()
+
+```{r}
+names(plant)
+```
+
+#### Currently, `co2_conc` is in units mL/L. What if we want it in dL/L? 
+
+--
+
+```{r}
+plant %>%
+  mutate(co2_conc_dl = co2_conc / 10)
+```
+
+---
+
+```{r}
+plant %>%
+  ## This will OVERWRITE the existing column - be careful!!
+  mutate(co2_conc = co2_conc / 10) %>%
+  head(2)
+```
+
+---
+
+# Renaming columns with rename()
+
++ Syntax: `rename(NEW = OLD)`. Very easy to mess up! That's ok!
+
+```{r}
+plant %>%
+  rename(concentration = co2_conc) %>%
+  head(2)
+```
+
+--
+
+```{r, error=TRUE}
+plant %>%
+  rename(co2_conc = concentration)
+```
+
+
+---
+
+# Arranging rows with arrange()
+
+```{r}
+small_plant <- plant %>% select(co2_rate, co2_conc, origin)
+```
+
+--
+
+.pull-left[
+#### Arrange in order of `co2_rate`
+```{r}
+small_plant %>%
+  arrange(co2_rate)
+```
+]
+
+.pull-right[
+#### Arrange in **descending** order of `co2_rate`
+```{r}
+small_plant %>%
+  arrange(desc(co2_rate))
+```
+]
+
+
+---
+
+# A mini wrangle!
+
+```{r}
+head(plant)
+```
+
+#### Find the ratio of concentration/rate for all the plants from Quebec exposed to a "chilled" environment
++ First, make a plan - how would you do this **by hand**?
++ Second, WRITE YOUR PLAN DOWN
++ Third, go *line by line* to build up your plan
+
+
+---
+
+
+# Conc/rate ratio for chilled Quebec plants
+
+```{r}
+plant
+```
+---
+
+# Conc/rate ratio for chilled Quebec plants
+
+```{r}
+plant %>%
+  filter(origin == "Quebec")
+```
+---
+
+
+# Conc/rate ratio for chilled Quebec plants
+
+
+```{r}
+plant %>%
+  filter(origin == "Quebec") %>%
+  filter(treatment == "chilled") 
+```
+
+---
+
+# Conc/rate ratio for chilled Quebec plants
+
+
+```{r}
+plant %>%
+  filter(origin == "Quebec") %>%
+  filter(treatment == "chilled") %>%
+  mutate(ratio = co2_conc / co2_rate)
+```
+---
+# Why you have to go step-by-step
+
+```{r, error=TRUE}
+plant %>%
+  filter(Origin == "Quebec") %>%
+  filter(treatment == "chill") %>%
+  mutate(ratio = conc_co2 / rate)
+```
+
+--
+
+```{r, error=TRUE}
+plant %>%
+  filter(origin == "Quebec") %>%
+  filter(treatment == "chill") %>%
+  mutate(ratio = conc_co2 / co2_rate)
+```
