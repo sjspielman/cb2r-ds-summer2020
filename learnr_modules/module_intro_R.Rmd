@@ -371,7 +371,7 @@ To answer this question, first *define* four variables (`banana_price`, `num_ban
 
 <br>
 
-#### 6. Let's combine our skills! Define a variable called `x` whose value is 7 (no quotes!). Then, determine its type with `class()`, but **save this output** to a new variable called `type_x`. Finally, use logical operators with this variable to ask: Is the type of the variable equal to (hint!) numeric?
+#### 6. Let's combine our skills! Define a variable called `x` whose value is 7 (no quotes!). Then, determine its type with `class()`, but **save this output** to a new variable called `type_x`. Finally, use logical operators with this variable to ask: Is the type of the variable equal to numeric?
   
 ```{r func_q6, exercise = TRUE}
 
@@ -382,7 +382,7 @@ To answer this question, first *define* four variables (`banana_price`, `num_ban
 ```
 
 ```{r func_q6-hint-2}
-# If you receive an error, it may be because you forgot to put quotes around *"numeric"*. If you don't use quotes, R thinks you're referring to a variable called `numeric`, but no such variable exists! R doesn't want to use variables that don't exist, because....they don't exist. 
+# If you receive an error, it may be because you forgot to put quotes around "numeric". If you don't use quotes, R thinks you're referring to a variable called `numeric`, but no such variable exists! R doesn't want to use variables that don't exist, because....they don't exist. 
 ```
 
 ## Set 5: Working with arrays
@@ -532,7 +532,8 @@ question("How many rows are in this data frame?",
          answer("6"),
          answer("83", correct = TRUE),
          answer("11"),
-         answer("We can't tell")
+         answer("We can't tell"),
+         allow_retry = TRUE
          )
 ```
 
@@ -545,7 +546,8 @@ question("How many columns are in this data frame?",
          answer("6"),
          answer("83"),
          answer("11", correct = TRUE),
-         answer("We can't tell")
+         answer("We can't tell"),
+         allow_retry = TRUE
          )
 ```
 
@@ -558,7 +560,8 @@ question("How many columns in the data frame contain *numeric* values?",
          answer("6", correct = TRUE),
          answer("5"),
          answer("All columns are numeric"),
-         answer("No columns are numeric")
+         answer("No columns are numeric"),
+         allow_retry = TRUE
          )
 ```
 

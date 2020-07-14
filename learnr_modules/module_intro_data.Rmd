@@ -29,7 +29,7 @@ Example: **Square footage of a building** is *numeric continuous*. Example value
 
 quiz(caption = "",
      question("What type of data is *the number of pixels on a screen*?",
-              answer("Numeric discrete ", correct = TRUE),
+              answer("Numeric discrete", correct = TRUE),
               answer("Numeric continuous"),
               answer("Categorical nominal"),
               answer("Categorical ordinal"),
@@ -78,7 +78,7 @@ quiz(caption = "",
               allow_retry = TRUE
               ),
      question("What type of data is the *number of legs an animal has*?",
-              answer("Numeric discrete ", correct = TRUE),
+              answer("Numeric discrete", correct = TRUE),
               answer("Numeric continuous"),
               answer("Categorical nominal"),
               answer("Categorical ordinal"),
@@ -88,22 +88,22 @@ quiz(caption = "",
      question("What type of data is the *types of cheese*?",
               answer("Numeric discrete "),
               answer("Numeric continuous"),
-              answer("Categorical nominal"),
-              answer("Categorical ordinal", correct = TRUE),
+              answer("Categorical nominal", correct = TRUE),
+              answer("Categorical ordinal"),
               answer("Categorical binary"),
               allow_retry = TRUE
               ),
      question("What type of data is the *belt level in karate*?",
               answer("Numeric discrete "),
               answer("Numeric continuous"),
-              answer("Categorical nominal", correct = TRUE),
-              answer("Categorical ordinal"),
+              answer("Categorical nominal"),
+              answer("Categorical ordinal", correct = TRUE),
               answer("Categorical binary"),
               allow_retry = TRUE
               ),
      question("What type of data is the *amount of sugar in an ice cream cone measured in mg*?",
-              answer("Numeric discrete", correct = TRUE),
-              answer("Numeric continuous"),
+              answer("Numeric discrete"),
+              answer("Numeric continuous", correct = TRUE),
               answer("Categorical nominal"),
               answer("Categorical ordinal"),
               answer("Categorical binary"),
@@ -235,7 +235,8 @@ quiz(caption = "",
               answer("electronegativity"),
               answer("metal_type"),
               answer("None of the above"),
-              allow_retry = TRUE
+              allow_retry = TRUE,
+              type = "multiple"
               ),
      question("Which variables are *numeric continuous*? Select all that apply.",
               answer("element_name"),
@@ -246,7 +247,7 @@ quiz(caption = "",
               answer("electronegativity", correct = TRUE),
               answer("metal_type"),
               answer("None of the above"),
-              allow_retry = TRUE
+              allow_retry = TRUE,type = "multiple"
               ),
      question(" Which variables are *categorical nominal*? Select all that apply.",
               answer("element_name", correct = TRUE, message = "This could also be considered ordinal due to the structure of the periodic table"),
@@ -257,7 +258,7 @@ quiz(caption = "",
               answer("electronegativity"),
               answer("metal_type", correct = TRUE),
               answer("None of the above"),
-              allow_retry = TRUE
+              allow_retry = TRUE,type = "multiple"
               ),
      question("Which variables are *categorical ordinal*? Select all that apply.",
               answer("element_name"),
@@ -268,7 +269,7 @@ quiz(caption = "",
               answer("electronegativity"),
               answer("metal_type"),
               answer("None of the above"),
-              allow_retry = TRUE
+              allow_retry = TRUE,type = "multiple"
               ),
           question("Which variables are *categorical binary*? Select all that apply.",
               answer("element_name"),
@@ -279,7 +280,7 @@ quiz(caption = "",
               answer("electronegativity"),
               answer("metal_type"),
               answer("None of the above", correct = TRUE),
-              allow_retry = TRUE
+              allow_retry = TRUE,type = "multiple"
               )
      )
 ```
