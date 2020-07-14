@@ -650,7 +650,7 @@ mean(msleep$awake)
 <br>
 
 #### An important learning moment!
-You'll notice in the full `summary()` output for `msleep`, there isn't much useful information for the character columns. You may have expected all the *categories* in these columns to be revealed. In fact, R does not treat character variables this way. To force R to consider a vector specifically as containing *categories*, you need to convert it into a new type of data called **factor**, which is a special type of variable in R for, you guessed it, working with categories. The code below shows how the column `vore` would be summarized when converted to a factor with the functio `as.factor()`. Run and understand this code.
+You'll notice in the full `summary()` output for `msleep`, there isn't much useful information for the character columns. You may have expected all the *categories* in these columns to be revealed. In fact, R does not treat character variables this way. To force R to consider a vector specifically as containing *categories*, you need to convert it into a new type of data called **factor**, which is a special type of variable in R for, you guessed it, working with categories. The code below shows how the column `vore` would be summarized when converted to a factor with the function `as.factor()`. Run and understand this code.
 
 ```{r msleep_factors, exercise=TRUE}
 ## Treat it regularly
