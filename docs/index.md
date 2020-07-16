@@ -15,7 +15,7 @@ This website hosts materials designed by [Stephanie J. Spielman](https://spielma
 | 7/7/20  | Different types of data |  [Interactive exercises](https://sjspielman.shinyapps.io/intro_data/)| None |
 | 7/9/20  | Introduction to R |  [Interactive exercises](https://sjspielman.shinyapps.io/intro_to_r/)| [Introduction to R guided lesson](http://htmlpreview.github.io/?https://github.com/sjspielman/cb2r-ds-summer2020/blob/master/resources/introduction_to_R.html) |
 | 7/14/20 | Introduction to R, continued |  Same as 7/9/20| Same as 7/9/20 |
-| 7/16/20 | Wrangling data with `dplyr` | [Interactive exercises](https://sjspielman.shinyapps.io/intro_dplyr/)| [Slides](../resources/introduction_to_dplyr.pdf) |
+| 7/16/20 | Wrangling data with `dplyr` | [Interactive exercises](https://sjspielman.shinyapps.io/intro_dplyr/)| [Slides](https://github.com/sjspielman/cb2r-ds-summer2020/blob/master/resources/introduction_to_dplyr.pdf) |
 | 7/21/20 | Summary Statistics and Statistical Inference | TBD| TBD |
 | 7/23/20 | Summarizing data in R | TBD| TBD |
 | 7/28/20 | Introduction to data visualization  | TBD| TBD |
