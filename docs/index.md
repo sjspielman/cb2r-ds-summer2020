@@ -34,6 +34,8 @@ This website hosts materials designed by [Stephanie J. Spielman](https://spielma
   + Not specific to any programming language - just about principles and styles in data visualization
 + [R for Data Science](https://r4ds.had.co.nz/) by Garrett Grolemund and Hadley Wickham
   + A tour through R's `tidyverse`
++ [The Tidyverse Cookbook](https://rstudio-education.github.io/tidyverse-cookbook/index.html) by Garrett Grolemund
+  + Quick reference for doing specific tasks in R within the `tidyverse` framework
 + [R4DS Learning Community](https://www.rfordatasci.com/)
   + See also [#tidytuesday](https://twitter.com/thomas_mock/status/1280174453410934784)
 + [Data Visualization: A practical Introduction](https://socviz.co/) by Kieran Healy
