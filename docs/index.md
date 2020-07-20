@@ -18,7 +18,7 @@ This website hosts materials designed by [Stephanie J. Spielman](https://spielma
 | 7/16/20 | Wrangling data with `dplyr` | [Interactive exercises](https://sjspielman.shinyapps.io/intro_dplyr/)| [Slides](https://github.com/sjspielman/cb2r-ds-summer2020/blob/master/resources/introduction_to_dplyr.pdf) |
 | 7/21/20 | Wrangling data with `dplyr` | Same as 7/16/20 | *Note: This session will run from 10-11 am only.* | 
 | 7/23/20 | Summary statistics and summarizing data in R | TBD| TBD |
-| 7/28/20 | Introduction to data visualization  | TBD| TBD |
+| 7/28/20 | Introduction to data visualization  | TBD | TBD |
 | 7/30/20 | Interpreting and critiquing data visualizations | TBD| TBD |
 | 8/4/20  | Visualizing data with `ggplot2` | TBD| TBD |
 | 8/6/20  | Visualizing data with `ggplot2`, continued | TBD| TBD |
@@ -40,6 +40,7 @@ This website hosts materials designed by [Stephanie J. Spielman](https://spielma
   + See also [#tidytuesday](https://twitter.com/thomas_mock/status/1280174453410934784)
 + [Data Visualization: A practical Introduction](https://socviz.co/) by Kieran Healy
   + Excellent book focused on `ggplot2`
++ [An **excellent** slideshow introducing `ggplot2`](https://pkg.garrickadenbuie.com/trug-ggplot2/#1)
 + [RStudio Resources](https://resources.rstudio.com/)
   + All levels of videos and tutorials
 + [`tidyverse` homepage](https://www.tidyverse.org/)
