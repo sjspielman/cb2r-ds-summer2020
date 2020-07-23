@@ -95,7 +95,7 @@ data_frame_variable %>%
 ```   
 
 <div id= "dplyr1_q6-hint">
-**Hint:** Supply multiple "and" conditions to `filter()` with commas, i.e. `filter(statement1, statement2)`
+**Hint:** Supply multiple "or" conditions to `filter()` using the logical `%in%` operator, as in: `filter(column %in% c(thing_i_want, other_thing_i_want))`
 </div>
   
 <br>
