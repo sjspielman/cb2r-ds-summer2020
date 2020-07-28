@@ -264,15 +264,21 @@ Run the code below, and then modify it to only remove rows where `conservation` 
 
 <br>
 
-#### 8. Let's practice *conditional mutation* - creating a new column with `dplyr::mutate()` whose new value should depend on some condition. For example, we may want to do an analysis that compares "heavy" to "light" mammals, where we define "heavy" as weighing 50 or more kg (i.e. 50 kg is considered "heavy"). 
-Use `dplyr::mutate()` with `dplyr::if_else()` to create a new column called `bodywt_class` that defines animals as heavy or light depending on their `bodywt` value.
+#### 8. Let's practice *conditional mutation* - creating a new column with `dplyr::mutate()` whose new value should depend on some condition. For example, we may want to do an analysis that compares "heavy" to "light" mammals, where we define "heavy" as weighing 50 or more kg (i.e. 50 kg is considered "heavy"). Use `dplyr::mutate()` with `dplyr::if_else()` to create a new column called `bodywt_class` that defines animals as heavy or light depending on their `bodywt` value.
   
+#### The code given below provides an example of using `dplyr::if_else()` with the iris dataset. Use this code as a template to build up your answer.
 ```{r, dplyr2_q8, exercise=TRUE}
+# Recall: there are 3 species in iris
+levels(iris$species)
 
+# Use mutate to create new column `is_it_setosa`.
+iris %>%
+ #       new column name              condition             if true    if false
+  mutate(is_it_setosa = dplyr::ifelse(Species == "setosa",   "Yes",      "No") )
 ```
 
 <div id= "dplyr2_q8-hint">
-**Hint:** Remember we use `dplyr::if_else()` like this: `dplyr::if_else(logical statement, if TRUE, if FALSE)`
+**Hint:** We use `dplyr::if_else()` like this: `dplyr::if_else(logical statement, if TRUE, if FALSE)`
 </div> 
   
 <br>
