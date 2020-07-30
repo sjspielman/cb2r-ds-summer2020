@@ -259,7 +259,8 @@ data_frame_variable %>%
 Run the code below, and then modify it to only remove rows where `conservation` is NA.
 
 ```{r, dplyr2_q7, exercise=TRUE}
-
+msleep %>%
+  drop_na() # No column specified means ALL rows
 ```
 
 <br>
@@ -269,12 +270,12 @@ Run the code below, and then modify it to only remove rows where `conservation` 
 #### The code given below provides an example of using `dplyr::if_else()` with the iris dataset. Use this code as a template to build up your answer.
 ```{r, dplyr2_q8, exercise=TRUE}
 # Recall: there are 3 species in iris
-levels(iris$species)
+levels(iris$Species)
 
 # Use mutate to create new column `is_it_setosa`.
 iris %>%
  #       new column name              condition             if true    if false
-  mutate(is_it_setosa = dplyr::ifelse(Species == "setosa",   "Yes",      "No") )
+  mutate(is_it_setosa = dplyr::if_else(Species == "setosa",   "Yes",      "No") )
 ```
 
 <div id= "dplyr2_q8-hint">
