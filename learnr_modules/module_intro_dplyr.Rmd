@@ -297,7 +297,7 @@ iris %>%
 
 ```
 
-11. Use all your skills to wrangle the data to arrive at the answer to this question: Which group has the highest **ratio** of body weight to brain weight: domesticated or non-domesticated mammals? *Make sure to PLAN your steps before coding them. When coding, go LINE by LINE.*
+#### 11. Use all your skills to wrangle the data to arrive at the answer to this question: Which group has the highest **ratio** of body weight to brain weight: domesticated or non-domesticated mammals? *Make sure to PLAN your steps before coding them. When coding, go LINE by LINE.*
 
 ```{r, dplyr2_q11, exercise=TRUE}
 
