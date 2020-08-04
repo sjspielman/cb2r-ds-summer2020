@@ -66,7 +66,7 @@ ul:first-child, ol:first-child {
 
 ```{r setup, include=FALSE, echo=FALSE}
 options(htmltools.dir.version = FALSE)
-knitr::opts_chunk$set(fig.width=7, fig.height=5)
+knitr::opts_chunk$set(fig.width=6, fig.height=4)
 library(xaringan)
 library(tidyverse) 
 library(cowplot)
@@ -167,7 +167,7 @@ msleep_subvore %>%
 # Identifying components of a plot
 
 .pull-left[
-```{r, echo=F, fig.height = 10}
+```{r, echo=F, fig.height = 8}
 msleep_subvore %>%
   ggplot(aes(x = vore, y = awake, fill = vore)) + geom_boxplot() + theme(legend.position = "none") -> a
 msleep_subvore %>%
@@ -190,7 +190,7 @@ msleep_subvore %>%
 # Identifying components of a plot
 
 .pull-left[
-```{r, echo=F, fig.height = 10}
+```{r, echo=F, fig.height = 8}
 msleep_subvore %>%
   ggplot(aes(x = vore, y = awake, fill = vore)) + geom_boxplot() + theme(legend.position = "none") -> a
 msleep_subvore %>%
@@ -202,7 +202,7 @@ a/b
 ]
 
 .pull-right[
-```{r, echo=F, fig.height = 10, message=F}
+```{r, echo=F, fig.height = 8, message=F}
 msleep_subvore %>%
   ggplot(aes(x = awake, fill = vore)) + geom_density(alpha = 0.6) + theme(legend.position = "top") -> a
 msleep_subvore %>%
