@@ -21,11 +21,11 @@ This website hosts materials designed by [Stephanie J. Spielman](https://spielma
 | 7/28/20 | Wrangling data with `dplyr` | 7/16/20 exercises | None |
 | 7/30/20 | Summary statistics and summarizing data in R | 7/16/20 exercises | None |
 | 8/4/20  | Interpreting and critiquing data visualizations | None | [Slides](https://github.com/sjspielman/cb2r-ds-summer2020/blob/master/resources/introduction_to_principles_dataviz.pdf) |
-| 8/6/20  | Visualizing data with `ggplot2` | TBD | TBD |
-| 8/11/20 | Visualizing data with `ggplot2` | TBD | TBD |
-| 8/13/20 | Working with external data | TBD| TBD |
+| 8/6/20  | Interpreting and critiquing data visualizations | TBD | TBD |
+| 8/11/20 | Visualizing data with `ggplot2` | See the RStudio Cloud project "ggplot 8-11-20" | [R script we wrote together](https://raw.githubusercontent.com/sjspielman/cb2r-ds-summer2020/master/resources/practice_ggplot_8-11-20.R) |
+| 8/13/20 | Working with external data | Continue with the RStudio Cloud project "ggplot 8-11-20"| TBD |
 | 8/18/20 | *Special guest speaker!* | TBD | TBD |
-| 8/20/20 | Writing professional reports with `rmarkdown` | TBD| TBD |
+| 8/20/20 | Writing professional reports with `Rmarkdown` | TBD| TBD |
 
 
 # Resources
