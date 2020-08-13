@@ -3,7 +3,7 @@ layout: index
 title: Home
 ---
 
-This website hosts materials designed by [Stephanie J. Spielman](https://spielmanlab.github.io) (unless otherwise specified), with assistance from Shemaiah Sotrah (senior undergraduate at Rowan University, 2020-21). All materials ([source](https://github.com/sjspielman/cb2r-ds-summer2020/) are released under a CC-BY-4.0 License. All workshop participants are expected to honor the [R Conference Code of Conduct](https://www.r-project.org/coc.html) and the [R Developer Code of Conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct/).
+This website hosts materials designed by [Stephanie J. Spielman](https://spielmanlab.github.io) (unless otherwise specified), with assistance from Shemaiah Sotrah (senior undergraduate at Rowan University, 2020-21). All materials ([source](https://github.com/sjspielman/cb2r-ds-summer2020/)) are released under a CC-BY-4.0 License. All workshop participants are expected to honor the [R Conference Code of Conduct](https://www.r-project.org/coc.html) and the [R Developer Code of Conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct/).
 
 ![Data science pipeline](https://d33wubrfki0l68.cloudfront.net/571b056757d68e6df81a3e3853f54d3c76ad6efc/32d37/diagrams/data-science.png)
 
@@ -23,7 +23,7 @@ This website hosts materials designed by [Stephanie J. Spielman](https://spielma
 | 8/4/20  | Interpreting and critiquing data visualizations | None | [Slides](https://github.com/sjspielman/cb2r-ds-summer2020/blob/master/resources/introduction_to_principles_dataviz.pdf) |
 | 8/6/20  | Interpreting and critiquing data visualizations | TBD | TBD |
 | 8/11/20 | Visualizing data with `ggplot2` | See the RStudio Cloud project "ggplot 8-11-20" | [R script we wrote together](https://raw.githubusercontent.com/sjspielman/cb2r-ds-summer2020/master/resources/practice_ggplot_8-11-20.R) and [Colors PDF](https://github.com/sjspielman/cb2r-ds-summer2020/blob/master/resources/static/Rcolor.pdf) |
-| 8/13/20 | Working with external data | Continue with the RStudio Cloud project "ggplot 8-11-20"| [Penguins Excel file to practice downloading/uploading/reading into R](https://github.com/sjspielman/cb2r-ds-summer2020/raw/master/resources/penguins.xlsx) |
+| 8/13/20 | Working with external data | Continue with the RStudio Cloud project "ggplot 8-11-20"| [Penguins Excel file to practice downloading/uploading/reading into R](https://github.com/sjspielman/cb2r-ds-summer2020/raw/master/resources/penguins.xlsx), and final version of the [R script we wrote together](https://raw.githubusercontent.com/sjspielman/cb2r-ds-summer2020/master/resources/practice_ggplot_8-13-20.R)|
 | 8/18/20 | *Special guest speaker!* | TBD | TBD |
 | 8/20/20 | Writing professional reports with `Rmarkdown` | TBD| TBD |
 
