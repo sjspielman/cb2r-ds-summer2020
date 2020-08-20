@@ -21,11 +21,11 @@ This website hosts materials designed by [Stephanie J. Spielman](https://spielma
 | 7/28/20 | Wrangling data with `dplyr` | 7/16/20 exercises | None |
 | 7/30/20 | Summary statistics and summarizing data in R | 7/16/20 exercises | None |
 | 8/4/20  | Interpreting and critiquing data visualizations | None | [Slides](https://github.com/sjspielman/cb2r-ds-summer2020/blob/master/resources/introduction_to_principles_dataviz.pdf) |
-| 8/6/20  | Interpreting and critiquing data visualizations | TBD | TBD |
+| 8/6/20  | Interpreting and critiquing data visualizations | None | Same slides as 8/4/20 |
 | 8/11/20 | Visualizing data with `ggplot2` | See the RStudio Cloud project "ggplot 8-11-20" | [R script we wrote together](https://raw.githubusercontent.com/sjspielman/cb2r-ds-summer2020/master/resources/practice_ggplot_8-11-20.R) and [Colors PDF](https://github.com/sjspielman/cb2r-ds-summer2020/blob/master/resources/static/Rcolor.pdf) |
-| 8/13/20 | Working with external data | Continue with the RStudio Cloud project "ggplot 8-11-20"| [Penguins Excel file to practice downloading/uploading/reading into R](https://github.com/sjspielman/cb2r-ds-summer2020/raw/master/resources/penguins.xlsx), and final version of the [R script we wrote together](https://raw.githubusercontent.com/sjspielman/cb2r-ds-summer2020/master/resources/practice_ggplot_8-13-20.R)|
-| 8/18/20 | *Special guest speaker!* | TBD | TBD |
-| 8/20/20 | Writing professional reports with `Rmarkdown` | TBD| TBD |
+| 8/13/20 | Working with external data and `ggplot2`| Continue with the RStudio Cloud project "ggplot 8-11-20"| [Penguins Excel file to practice downloading/uploading/reading into R](https://github.com/sjspielman/cb2r-ds-summer2020/raw/master/resources/penguins.xlsx), and final version of the [R script we wrote together](https://raw.githubusercontent.com/sjspielman/cb2r-ds-summer2020/master/resources/practice_ggplot_8-13-20.R)|
+| 8/18/20 | *Special guest speaker!* | None | None |
+| 8/20/20 | Plotting `#tidytuesday` data and writing professional reports with `Rmarkdown` | None | [R script to plot the data](https://raw.githubusercontent.com/sjspielman/cb2r-ds-summer2020/master/resources/practice_tidy_tuesday.R) and [RMarkdown version of plotting the data](https://raw.githubusercontent.com/sjspielman/cb2r-ds-summer2020/master/resources/my_first_rmarkdown.Rmd) |
 
 
 # Resources

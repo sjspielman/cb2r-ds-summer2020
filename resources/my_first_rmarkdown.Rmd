@@ -1,0 +1,32 @@
+---
+title: "My first rmarkdown!!!"
+author: "Stephanie Spielman"
+date: "8/20/2020"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Let's set up!
+
+First we want to load the tidyverse libraries and read in our plant datasets.
+
+
+```{r}
+library(tidyverse)
+plants <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/plants.csv')
+```
+
+## We are going to plot!
+
+Here is a plot showing the number of plants on each continent!
+
+```{r plantplot}
+ggplot(plants) +
+  # map columns onto plot features. some might calls these aesthetics
+  aes(x = continent, fill = continent) + 
+  geom_bar()
+```
